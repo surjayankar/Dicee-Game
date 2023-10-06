@@ -1,0 +1,90 @@
+.img1, .img2{
+    height: 150px;
+    width: 150px;
+}
+body {
+    font-family: 'Indie Flower', cursive;
+    background-color: #FFF5E0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    position: relative;
+}
+
+#darkModeToggle {
+    position: absolute;
+    top: 20px; /* Adjust the top distance according to your design */
+    right: 20px; /* Adjust the right distance according to your design */
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 999; /* Ensure button appears above other elements */
+}
+
+body.dark-mode {
+    background-color: #333; /* Background color for dark mode */
+    color: #f0f0f0; /* Text color for dark mode */
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.dice {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 2rem;
+    color: #FF6969;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.5s ease-in-out;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 8rem;
+    margin-bottom: 20px;
+    color: #C70039;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+body.dark-mode footer,body.dark-mode #darkModeToggle {
+    background-color: #FFF5E0;
+    color: #333; /* Change the footer background color for dark mode */
+}
+
+/* Dice rolling animation */
+.roll-animation {
+    animation: roll 0.5s ease-in-out;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
